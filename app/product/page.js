@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import useCart from '../(store)/store';
 
 export default function ProductPage(props) {
@@ -29,8 +30,10 @@ export default function ProductPage(props) {
     <div className="flex flex-col p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1000px] mx-auto">
         <div className="md:p-2 md:shadow">
-          <img
+          <Image
             src={productInfo.images[0]}
+            height={400}
+            width={400}
             alt={name}
             className="w-full h-full object-cover"
           />

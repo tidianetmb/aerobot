@@ -1,5 +1,6 @@
 'use client';
 import useCart from '@/app/(store)/store';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 export default function ProductCard(props) {
@@ -24,8 +25,10 @@ export default function ProductCard(props) {
       onClick={onProductClick}
       className="flex flex-col shadow bg-white hover:shadow-lg cursor-pointer"
     >
-      <img
+      <Image
         src={productInfo.images[0]}
+        height={400}
+        width={400}
         alt={name}
         className="w-full h-full object-cover"
       />
